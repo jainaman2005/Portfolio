@@ -32,15 +32,14 @@ const Experience = () => {
     return (
         <section
             id="experience"
-            className="w-full bg-[#1036397f] text-white px-4
-             sm:px-8 md:px-12 lg:px-20 py-15  my-10 sm:my-30 lg:my-10"
+            className="w-full min-h-screen bg-[#1036397f] text-white py-15 px-4 sm:px-8 md:px-12 xl:px-20"
         >
-            <h1 className="text-xl sm:text-2xl md:text-4xl font-bold text-center sm:text-justify mb-10 underline underline-offset-8 decoration-[#3b8e92]">
+            <h1 className="text-lg sm:text-xl md:text-3xl font-bold decorate underline underline-offset-8 decoration-[#3b8e92] mb-5">
                 My Experience
             </h1>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full mx-auto">
                 {/* Certifications */}
-                <div className="bg-[#132021] p-6 rounded-md shadow-lg">
+                <div className="bg-[#132021] p-6 rounded-md shadow-lg shadow-black/90">
                     <h2 className="text-lg sm:text-xl md:text-2xl font-semibold mb-4 border-b-2 border-[#dcf1f2] pb-2">
                         Certifications
                     </h2>
@@ -63,7 +62,7 @@ const Experience = () => {
                 </div>
 
                 {/* Internships */}
-                <div className="bg-[#132021] p-6 rounded-md shadow-lg">
+                <div className="bg-[#132021] p-6 rounded-md shadow-lg shadow-black/90">
                     <h2 className="text-lg sm:text-xl md:text-2xl font-semibold mb-4 border-b-2 border-[#dcf1f2] pb-2">
                         Internships
                     </h2>

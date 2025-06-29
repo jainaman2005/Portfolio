@@ -1,3 +1,8 @@
+html{
+    scroll-behavior: smooth;
+    transition-duration: 300ms;
+    transition: ease-in-out;
+}
 body {
     margin: 0;
     padding: 0;
@@ -6,6 +11,10 @@ body {
 }
 #root{
     height: 100vh;
+}
+.animate-flow{
+    animation: gradientFlow 10s ease-in-out infinite;
+    background-size: 150% 150%;
 }
 *{
     box-sizing: border-box;
@@ -18,4 +27,26 @@ body{
     outline-offset: "4px";
     box-shadow: "0 0 8px rgba(0, 0, 0, 0.5)";
     border-radius: "50%";
+}
+
+
+@keyframes gradientFlow {
+  0% { background-position:0% 25% }
+  20%  { background-position: 25% 50%; }
+  40%  { background-position: 50% 50%; }
+  60%  { background-position: 75% 50%; }
+  80%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+@keyframes customBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(18px);
+  }
+}
+
+.custom-bounce {
+  animation: customBounce 1.8s ease-in-out infinite;
 }

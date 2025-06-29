@@ -1,6 +1,8 @@
 import React from "react";
 import "./project.css";
 import Sci_Calci from "../../assets/Calci_Proj.png"
+import sort_visual_img from "../../assets/Sorting-Visualizer.png";
+import weatherApp_img from "../../assets/weatherApp.png";
 const projects = [
     {
         title: "Scientific Calculator",
@@ -9,38 +11,35 @@ const projects = [
         description: "I created a Scientific Calculator using DHTML (HTML, CSS, JavaScript) with support for advanced operations like trigonometry, logarithms, and exponentiation. The calculator uses DOM manipulation for dynamic updates and regular expressions to parse and validate user input, ensuring accurate expression handling and smooth interactivity within a responsive UI.",
     },
     {
-        title: "Project 2",
-        image: "https://via.placeholder.com/300",
-        url: "/",
-        description: "This is a description of Project 2.",
+        title: "Sorting visualizer",
+        image: sort_visual_img,
+        url: "https://sorting-visualizer-with-git-6cbc2a-aman-jains-projects-540b55ec.vercel.app/",
+        description: "Developed a Sorting Visualizer using Flask that dynamically showcases the step-by-step process of various sorting algorithms through interactive animations.",
     },
     {
-        title: "Project 3",
-        image: "https://via.placeholder.com/300",
-        url: "/",
-        description: "This is a description of Project 3.",
+        title: "UWeather",
+        image: weatherApp_img,
+        url: "https://jainaman2005.github.io/WeatherApp/",
+        description: "A React-based Weather and AQI App that fetches real-time data from the OpenWeatherMap API. It displays essential weather details and air quality metrics for any city entered by the user.",
     },
 ];
-const backHide = () => {
 
-}
 const Projects = () => {
     return (
         <section
-            id="projects"
-            className="w-full bg-[#1036397f] text-white px-4
-             sm:px-8 md:px-12 lg:px-20 py-15  my-10 sm:my-30 lg:my-10"
+            id="project"
+            className="min-h-screen w-full bg-[#1036397f] text-white py-15 px-4 sm:px-8 md:px-12 lg:px-20"
         >
-            <h1 className="text-xl sm:text-2xl md:text-4xl font-bold text-center sm:text-justify  mb-10 underline underline-offset-8 decoration-[#3b8e92]">
-                My Projects
+            <h1 className="text-lg sm:text-xl md:text-3xl font-bold decorate underline underline-offset-8 decoration-[#3b8e92] mb-5">
+                Projects
             </h1>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 gap-x-10">
                 {projects.map((project, index) => (
                     <div
                         key={index}
-                        className="group  perspective-[750px] transform-3d bg-[#20353600] w-full h-80 group-hover:transition-transform duration-700 overflow-hidden rounded-lg shadow-md shadow-black/50"
+                        className="group  perspective-[750px] transform-3d bg-[#20353600] w-full h-80 group-hover:transition-transform duration-700 overflow-hidden rounded-lg "
                     >
-                        <div className="relative w-full h-full transform-style-preserve-3d transition-transform duration-700 hover:rotate-y-180 shadow-lg shadow-black/50 ">
+                        <div className="relative w-full h-full transform-style-preserve-3d transition-transform duration-700 hover:rotate-y-180  ">
                             {/* Front Side */}
                             <div className="absolute w-full h-full backface-hidden bg-[#203536] rounded-lg  overflow-hidden ">
                                 <div className="relative w-full h-full">

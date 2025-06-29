@@ -1,5 +1,7 @@
 import React, { useRef } from "react";
+import {Icon} from "@iconify/react";
 import emailjs from "@emailjs/browser";
+// import Globe from "../Globe/Globe.jsx"
 const Contact = () => {
     const form = useRef();
     const sendEmail = (e) => {
@@ -23,26 +25,25 @@ const Contact = () => {
     };
     const details = {
         Name: "Aman Jain",
-        phoneNo: "+91-9873918255",
         email: "ajainusict2026@gmail.com",
         Address: "New Delhi, Delhi, India",
     }
     return (
         <section
             id="contact"
-            className="w-full bg-[#1036397f] text-white px-4 sm:px-8 md:px-12 lg:px-20 py-15 my-10 sm:my-30 lg:my-10"
+            className="w-full min-h-screen flex flex-col items-center text-white px-4 sm:px-8 md:px-12 lg:px-20 bg-[#1036397f] shadow-[0_0_20px_rgba(0,0,0,0.2)] py-15"
         >
-            <h1 className="text-xl sm:text-2xl md:text-4xl font-bold text-center sm:text-justify mb-10 underline underline-offset-8 decoration-[#3b8e92]">
+            <h1 className="text-lg sm:text-xl md:text-3xl font-bold decorate underline underline-offset-8 decoration-[#3b8e92] mb-5 self-start text-justify">
                 Contact Me
             </h1>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-6xl mx-auto">
-                <div className="bg-[#03454518] p-6 rounded-md shadow-lg shadow-neutral-800">
-                    <h2 className="text-2xl text-center font-semibold mb-10  pb-2 mx-auto w-1/2 bg-[#022426] rounded-lg shadow-md">
-                        Contact Details
+                <div className="bg-[#094e4e] p-6 rounded-md shadow-lg shadow-neutral-800">
+                    <h2 className="text-xl p-1 bg-neutral-900/65 rounded-md text-center mb-3">
+                        Details :
                     </h2>
                     <ul className="list-none text-base text-[#e9f0f1]">
-                        <li className="mb-4">
-                            <strong>Name:</strong>{" "}
+                        <li className="flex items-center gap-2 mb-4">
+                            <Icon icon="qlementine-icons:user-16" className="text-xl font-bold"/>
                             <a
                                 href="/"
                                 className="text-[#9cfaff] hover:underline"
@@ -50,8 +51,8 @@ const Contact = () => {
                                 {details.Name}
                             </a>
                         </li>
-                        <li className="mb-4">
-                            <strong>Email:</strong>{" "}
+                        <li className="flex items-center gap-2 mb-4">
+                            <Icon icon="skill-icons:gmail-light" className="text-2xl font-bold"/>
                             <a
                                 href="mailto:ajainusict26@gmail.com"
                                 className="text-[#9cfaff] hover:underline"
@@ -59,17 +60,9 @@ const Contact = () => {
                                 {details.email}
                             </a>
                         </li>
-                        <li className="mb-4">
-                            <strong>Phone:</strong>{" "}
-                            <a
-                                href="tel:+919873918255"
-                                className="text-[#9cfaff] hover:underline"
-                            >
-                                {details.phoneNo}
-                            </a>
-                        </li>
-                        <li className="mb-4">
-                            <strong>Address:</strong> {details.Address}
+                        <li className="flex items-center gap-2 mb-4">
+                            <Icon icon={"stash:location-light"} className="text-xl font-bold"/>
+                            {details.Address}
                         </li>
                     </ul>
                 </div>

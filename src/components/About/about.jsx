@@ -23,7 +23,6 @@ const HoverableSkill = ({ skillName, stack }) => {
     );
 };
 const About = () => {
-    const [hoveredSkill, setHoveredSkill] = useState(null);
 
     const frontendStack = [
         "HTML",
@@ -52,37 +51,38 @@ const About = () => {
         <section
             name="about-section"
             id="about"
-            className="w-screen flex flex-col items-center justify-center min-h-screen text-white px-4 sm:px-8 md:px-12 lg:px-20 bg-[#1036397f] shadow-[0_0_20px_rgba(0,0,0,0.2)] my-2.5 sm:my-20 lg:my-10 py-15"
+            className="w-full min-h-screen flex flex-col items-center text-white px-4 sm:px-8 md:px-12 lg:px-20 bg-[#1036397f] shadow-[0_0_20px_rgba(0,0,0,0.2)] py-15"
         >
             {/* Introduction */}
-            <div className="flex flex-col gap-y-2 text-center sm:text-justify mb-8">
-                <h1 className="text-xl sm:text-2xl md:text-4xl font-bold mb- decorate underline underline-offset-8 decoration-[#3b8e92] mb-5">
+            <div className="flex flex-col gap-y-2  sm:text-justify mb-8">
+                <h1 className="text-lg sm:text-xl md:text-3xl font-bold decorate underline underline-offset-8 decoration-[#3b8e92] mb-5">
                     About Me
                 </h1>
-                <p className="text-lg sm:text-lg md:text-xl text-[#e9f0f1] font-serif">
-                    I'm a 3rd-year B.Tech CSE student at USICT, GGSIPU (Delhi),
+                <p className="text-sm sm:text-md md:text-xl text-[#e9f0f1] font-serif">
+                    I'm a final-year B.Tech CSE student at USICT, GGSIPU (Delhi),
                     passionate about AI/ML — especially in data preprocessing,
                     feature engineering, and model tuning.
                     <br />
                     I love working with real-world datasets and building
                     efficient ML workflows.
                 </p>
-                <p className="text-lg sm:text-lg md:text-xl text-[#e9f0f1] font-serif">
+                <p className="text-sm sm:text-md md:text-xl text-[#e9f0f1] font-serif">
                     I have solid skills in front-end, along with basic backend
                     experience using RESTful APIs.
-                    <br />I aim to craft full-stack solutions that merge clean
-                    UI with smart, data-driven logic.
+                    <br />
+                    <span className="text-cyan-300 font-semibold">I aim to craft full-stack solutions that merge clean
+                    UI with smart, data-driven logic.</span>
                 </p>
             </div>
 
             {/* Grid Layout for Summary, Skills, and Education */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-6xl">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 w-full">
                 {/* Skills Set */}
                 <div className="bg-[#132021] p-6 rounded-md shadow-lg relative">
-                    <h2 className="text-2xl font-semibold mb-4 border-b-2 border-[#dcf1f2] pb-2">Skills</h2>
+                    <h2 className="text-md sm:text-lg md:text-xl font-semibold mb-4 border-b-2 border-[#dcf1f2] pb-2">Skills</h2>
                     <ul className="list-disc list-inside text-base text-[#e9f0f1]">
-                        <HoverableSkill skillName="Frontend" stack={frontendStack} />
-                        <HoverableSkill skillName="Backend" stack={BackendStack} />
+                        <HoverableSkill skillName="Frontend Developer" stack={frontendStack} />
+                        <HoverableSkill skillName="Backend Developer" stack={BackendStack} />
                         <HoverableSkill
                             skillName="Programming Languages"
                             stack={programmingLanguages}
@@ -92,7 +92,7 @@ const About = () => {
 
                 {/* Education */}
                 <div className="bg-[#132021] p-6 rounded-md shadow-lg">
-                    <h2 className="text-2xl font-semibold mb-4 border-b-2 border-[#dcf1f2] pb-2">Education</h2>
+                    <h2 className="text-md sm:text-lg md:text-xl font-semibold mb-4 border-b-2 border-[#dcf1f2] pb-2">Education</h2>
                     <ul className="list-none text-base text-[#e9f0f1]">
                         <li>
                             <strong>Bachelor of Technology (B.Tech)</strong>
